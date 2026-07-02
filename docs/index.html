@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>안심주유 — 가격보다 믿음을 채우다</title>
+<meta name="description" content="산업통상부 공공데이터로 만드는 믿을 수 있는 주유소 지도. 한국석유관리원 품질협약·전산보고 + 한국석유공사 오피넷 유가를 결합한 안심지수.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">⛽</span>
+    <div>
+      <h1>안심주유</h1>
+      <p class="tagline">가격보다 <b>믿음</b>을 채우다</p>
+    </div>
+  </div>
+  <div class="controls">
+    <input id="search" type="search" placeholder="지역·주유소명 검색 (예: 강남구)">
+    <select id="fuel">
+      <option value="B027">휘발유</option>
+      <option value="D047">경유</option>
+    </select>
+    <div class="toggle-group" role="group" aria-label="정렬 기준">
+      <button id="mode-price" class="toggle">최저가순</button>
+      <button id="mode-safe" class="toggle active">안심순</button>
+    </div>
+    <button id="locate" title="내 위치">📍 내 주변</button>
+  </div>
+</header>
+
+<div class="statsbar" id="statsbar">데이터 불러오는 중…</div>
+
+<main class="layout">
+  <div id="map" role="application" aria-label="주유소 지도"></div>
+  <aside class="panel" id="panel">
+    <div class="legend">
+      <span class="chip grade-safe">🟢 안심 80+</span>
+      <span class="chip grade-good">🔵 양호 50+</span>
+      <span class="chip grade-basic">⚪ 정보부족</span>
+      <span class="chip grade-warning">⚠️ 주의</span>
+    </div>
+    <ol id="list" class="station-list"></ol>
+  </aside>
+</main>
+
+<footer class="foot">
+  <p>데이터: 한국석유공사(오피넷 유가정보) · 한국석유관리원(석유품질관리지원협약주유소·전산보고) — 산업통상부 공공데이터</p>
+  <p id="updated"></p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data/stations.js"></script>
+<script src="js/score.js"></script>
+<script src="js/data.js"></script>
+<script src="js/map.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
