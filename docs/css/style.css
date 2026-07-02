@@ -78,6 +78,7 @@ body {
 .badge.quality  { background: #dcfce7; color: #166534; }
 .badge.ereport  { background: #dbeafe; color: #1e40af; }
 .badge.violation{ background: #fee2e2; color: #991b1b; }
+.badge.anomaly  { background: #fef3c7; color: #92400e; }
 .badge.score-safe    { background: var(--safe); color: #fff; }
 .badge.score-good    { background: var(--good); color: #fff; }
 .badge.score-basic   { background: var(--basic); color: #fff; }
