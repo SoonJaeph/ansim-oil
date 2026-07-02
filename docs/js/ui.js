@@ -34,10 +34,13 @@ const UI = (() => {
 
   function cardHtml(st, fuel) {
     const g = Score.gradeMeta(st.grade);
-    const badges = st.badges.map(b => {
+    let badges = st.badges.map(b => {
       const m = Score.badgeMeta(b);
       return m ? `<span class="badge ${b}" title="${m.title}">${m.label}</span>` : "";
     }).join("");
+    if (st.anomaly && st.anomaly[fuel] && st.grade !== "safe") {
+      badges += `<span class="badge anomaly" title="지역 평균보다 ${st.anomaly[fuel].toLocaleString()}원 저렴 — 이상탐지 알고리즘이 감지한 비정상 저가입니다. 품질 신호를 함께 확인하세요.">⚡이상저가</span>`;
+    }
     return `
       <div class="row1">
         <span class="name">${g.emoji} ${st.name}</span>
