@@ -1,0 +1,20 @@
+{
+  "updated": "2026-07-02",
+  "note": "개발용 샘플 데이터 — 파이프라인 실행 시 실데이터로 교체됩니다",
+  "sources": ["한국석유공사 오피넷 유가정보 API", "한국석유관리원 석유품질관리지원협약주유소", "한국석유관리원 전산보고"],
+  "stats": { "total": 12, "quality": 5, "ereport": 6, "violation": 2 },
+  "stations": [
+    { "id": "S0001", "name": "한빛에너지 강남점", "brand": "SKE", "addr": "서울 강남구 테헤란로 311", "sido": "서울", "sigungu": "강남구", "lat": 37.5045, "lon": 127.0498, "prices": { "B027": 1698, "D047": 1545 }, "score": 100, "grade": "safe", "badges": ["quality", "ereport"], "self": true },
+    { "id": "S0002", "name": "미래주유소", "brand": "GSC", "addr": "서울 강남구 도산대로 210", "sido": "서울", "sigungu": "강남구", "lat": 37.5215, "lon": 127.0330, "prices": { "B027": 1672, "D047": 1521 }, "score": 70, "grade": "good", "badges": ["quality"], "self": false },
+    { "id": "S0003", "name": "서초중앙셀프", "brand": "HDO", "addr": "서울 서초구 반포대로 58", "sido": "서울", "sigungu": "서초구", "lat": 37.4890, "lon": 127.0090, "prices": { "B027": 1655, "D047": 1509 }, "score": 60, "grade": "good", "badges": ["ereport"], "self": true },
+    { "id": "S0004", "name": "강변주유소", "brand": "SOL", "addr": "서울 송파구 올림픽로 145", "sido": "서울", "sigungu": "송파구", "lat": 37.5145, "lon": 127.1065, "prices": { "B027": 1639, "D047": 1495 }, "score": 30, "grade": "basic", "badges": [], "self": true },
+    { "id": "S0005", "name": "제일석유 잠실", "brand": "SKE", "addr": "서울 송파구 송파대로 345", "sido": "서울", "sigungu": "송파구", "lat": 37.5010, "lon": 127.1120, "prices": { "B027": 1628, "D047": 1488 }, "score": 20, "grade": "warning", "badges": ["violation"], "self": false },
+    { "id": "S0006", "name": "그린오일 마포점", "brand": "GSC", "addr": "서울 마포구 월드컵로 88", "sido": "서울", "sigungu": "마포구", "lat": 37.5560, "lon": 126.9105, "prices": { "B027": 1685, "D047": 1533 }, "score": 100, "grade": "safe", "badges": ["quality", "ereport"], "self": true },
+    { "id": "S0007", "name": "서강셀프주유소", "brand": "HDO", "addr": "서울 마포구 서강로 77", "sido": "서울", "sigungu": "마포구", "lat": 37.5480, "lon": 126.9350, "prices": { "B027": 1649, "D047": 1502 }, "score": 60, "grade": "good", "badges": ["ereport"], "self": true },
+    { "id": "S0008", "name": "은평중앙주유소", "brand": "SOL", "addr": "서울 은평구 통일로 855", "sido": "서울", "sigungu": "은평구", "lat": 37.6190, "lon": 126.9210, "prices": { "B027": 1662, "D047": 1515 }, "score": 70, "grade": "good", "badges": ["quality"], "self": false },
+    { "id": "S0009", "name": "북한산주유소", "brand": "RTX", "addr": "서울 은평구 진관동 120", "sido": "서울", "sigungu": "은평구", "lat": 37.6350, "lon": 126.9180, "prices": { "B027": 1618, "D047": 1479 }, "score": 15, "grade": "warning", "badges": ["violation"], "self": true },
+    { "id": "S0010", "name": "동서울에너지", "brand": "SKE", "addr": "서울 광진구 아차산로 500", "sido": "서울", "sigungu": "광진구", "lat": 37.5470, "lon": 127.0870, "prices": { "B027": 1676, "D047": 1528 }, "score": 100, "grade": "safe", "badges": ["quality", "ereport"], "self": false },
+    { "id": "S0011", "name": "천호대로주유소", "brand": "GSC", "addr": "서울 강동구 천호대로 1005", "sido": "서울", "sigungu": "강동구", "lat": 37.5385, "lon": 127.1270, "prices": { "B027": 1645, "D047": 1498 }, "score": 60, "grade": "good", "badges": ["ereport"], "self": true },
+    { "id": "S0012", "name": "올림픽셀프주유소", "brand": "HDO", "addr": "서울 강동구 올림픽로 660", "sido": "서울", "sigungu": "강동구", "lat": 37.5520, "lon": 127.1450, "prices": { "B027": 1699, "D047": 1548 }, "score": 100, "grade": "safe", "badges": ["quality", "ereport"], "self": true }
+  ]
+}
