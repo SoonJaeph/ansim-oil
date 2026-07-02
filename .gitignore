@@ -1,0 +1,5 @@
+# 오피넷 캐시 (파이프라인이 재생성) — 석유관리원 CSV는 커밋 (Actions에서 필요)
+data-raw/opinet_stations.json
+__pycache__/
+*.pyc
+.env
