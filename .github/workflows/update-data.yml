@@ -1,0 +1,37 @@
+name: 데이터 자동 갱신
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 매일 06:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 의존성 설치
+        run: pip install -r data-pipeline/requirements.txt
+
+      - name: 파이프라인 실행
+        env:
+          OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
+        run: |
+          cd data-pipeline
+          python run_pipeline.py
+
+      - name: 변경사항 커밋
+        run: |
+          git config user.name "ansim-oil-bot"
+          git config user.email "actions@github.com"
+          git add docs/data/stations.json docs/data/stations.js
+          git diff --cached --quiet || git commit -m "data: 자동 갱신 $(date +%F)"
+          git push
